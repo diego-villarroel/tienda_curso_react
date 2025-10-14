@@ -1,0 +1,11 @@
+.nav_list {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+}
+
+.nav_item {
+    /* Puedes agregar más estilos aquí */
+}
