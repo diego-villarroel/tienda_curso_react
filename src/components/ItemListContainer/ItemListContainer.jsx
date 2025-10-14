@@ -1,7 +1,13 @@
+import { ItemList } from "../ItemList/ItemList"
+
 export const ItemListContainer = ({ titulo, productos }) => {
+    // ESTADO
+
+    // LLAMADA A UNA API
     return (
-        <div>
+        <section>
             <h2>{titulo}</h2>
-        </div>
+            <ItemList lista={productos}/>
+        </section>
     )
 }
