@@ -8,6 +8,31 @@
     color: black;
 }
 
-.nav_item {
-    /* Puedes agregar más estilos aquí */
+.contador-carrito {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 6px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    background: #e53935;
+    border-radius: 999px;
+    /* position: absolute;
+    top: -6px;
+    right: -8px; */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.18);
+    line-height: 1;
+    transform: translateZ(0);
+}
+
+/* Variante para 2+ dígitos (opcional: añade la clase "multi" cuando total >= 10) */
+.contador-carrito.multi {
+    min-width: 24px;
+    height: 20px;
+    font-size: 11px;
+    top: -8px;
+    right: -10px;
 }
