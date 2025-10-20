@@ -1,7 +1,7 @@
-import { UseCartContext } from "../../context/CartContext/UseCartContext"
+import { UseCartContext } from "../../context/CartContext/UseCartContext";
 
 export const Carrito = () => {
-    const { carrito, vaciarCarrito } = UseCartContext();
+    const { carrito, vaciarCarrito, eliminarItemCarrito } = UseCartContext();
     
     return (
         <div>
@@ -10,7 +10,7 @@ export const Carrito = () => {
                 carrito.map( 
                     (prod) => (
                         <div key={prod.id}>
-                            <p>{prod.nombre} - ${prod.precio}</p>
+                            <p><img src={prod.imgPath} alt="" height={40} /> {prod.nombre} - ${prod.precio} <button onClick={() => eliminarItemCarrito(prod.id)}>Eliminar</button></p>
                         </div>
                     ) 
                 )

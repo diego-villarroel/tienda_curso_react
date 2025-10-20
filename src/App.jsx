@@ -4,6 +4,7 @@ import { Header } from './components/Header/Header';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { CartProvider } from './context/CartContext/CartProvider';
 import { Carrito } from './components/Carrito/Carrito';
+import { Footer } from './components/Footer/Footer';
 import './App.css';
 
 function App() {
@@ -22,8 +23,9 @@ function App() {
 
                 </CartProvider>
             </BrowserRouter>
+            <Footer></Footer>
         </>
     )
 }
 
-export default App
+export default App;

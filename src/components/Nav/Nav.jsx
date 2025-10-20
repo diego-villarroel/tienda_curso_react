@@ -21,7 +21,7 @@ export const Nav = () => {
                 </li>
                 <li>
                     <Link to={"/carrito"}> 🛒 </Link>
-                    { totalItemsCarrito() > 0 && <span className='contador-carrito'>{totalItemsCarrito}</span> }
+                    { totalItemsCarrito() > 0 && <span className='contador-carrito'>{totalItemsCarrito()}</span> }
                 </li>
             </ul>
         </nav>

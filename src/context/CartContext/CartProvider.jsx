@@ -27,7 +27,12 @@ export const CartProvider = ({ children }) => {
         }
     }
 
-    const valores = { carrito, agregarAlCarrito, vaciarCarrito, totalItemsCarrito };
+    const eliminarItemCarrito = (id) => {
+        let nuevoCarrito = carrito.filter((prod) => prod.id !== id);
+        setCarrito(nuevoCarrito);
+    }
+
+    const valores = { carrito, agregarAlCarrito, vaciarCarrito, totalItemsCarrito, eliminarItemCarrito };
     return (
         <CartContext.Provider value={valores}>{children}</CartContext.Provider>
     )
