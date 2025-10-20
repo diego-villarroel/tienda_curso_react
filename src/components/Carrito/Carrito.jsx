@@ -17,7 +17,7 @@ export const Carrito = () => {
             ) : ( <p> Carrito Vacio</p>) }
             { carrito.length ? (
                 <div>
-                    <button>Finalizar Compra</button> 
+                    <button>Terminar Compra</button> 
                     <button onClick={vaciarCarrito}>Vaciar Carrito</button>
                 </div>
             ) : null }
