@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { ItemList } from "../ItemList/ItemList"
 
-export const ItemListContainer = ({ titulo }) => {
+export const ItemListContainer = () => {
     // ESTADO
     const [products, setPorducts] = useState([]);
     // EFECTO
@@ -21,7 +21,6 @@ export const ItemListContainer = ({ titulo }) => {
     // LLAMADA A UNA API
     return (
         <section>
-            <h2>{titulo}</h2>
             <ItemList lista={products}/>
         </section>
     )

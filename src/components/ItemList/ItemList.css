@@ -1,0 +1,32 @@
+/* Contenedor principal: flex en fila, con wrap y separación */
+.item-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem; /* separación entre cards */
+    align-items: flex-start;
+    padding: 1rem;
+    margin: 0;
+    box-sizing: border-box;
+    justify-content: flex-start;
+}
+
+/* Card individual */
+.item-card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    padding: 1rem;
+    width: 220px; /* ancho fijo para uniformidad */
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+    box-sizing: border-box;
+}
+
+/* Efecto hover */
+.item-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.14);
+}

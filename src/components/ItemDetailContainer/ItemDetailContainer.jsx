@@ -1,8 +1,11 @@
-import { useState, useEffect, use } from 'react'
+import { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom';
 import { ItemDetail } from '../ItemDetail/ItemDetail';
 
 export const ItemDetailContainer = () => {
     const [detail, SetDetail] = useState({});
+
+    const {id} = useParams();
 
     useEffect(() => {
         fetch('/data/api.json').
@@ -12,8 +15,9 @@ export const ItemDetailContainer = () => {
             }
             return res.json();
         }).then((data) => {
-            const foundItem = data.find((item) => item.id === '1');
-            if (foundItem) {
+            const foundItem = data.find((item) => parseInt(item.id) === parseInt(id));
+            
+            if (foundItem) {                
                 SetDetail(foundItem);
             } else {                
                 throw new Error('Producto no encontrado');
@@ -21,11 +25,12 @@ export const ItemDetailContainer = () => {
         }).catch((err) => {
             console.error(err);
         });
-    }, [])  
+    }, [id]);
     return (
+        
         <main>
             {Object.keys(detail).length ? (
-                <ItemDetail {...detail} />
+                <ItemDetail detail={detail} />
             ) : (
                 <p>...cargando</p>
             )}
