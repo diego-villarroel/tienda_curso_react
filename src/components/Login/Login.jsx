@@ -4,7 +4,7 @@ import { useAuthContext } from '../../context/AuthContext/useAuthContext';
 
 export const Login = () => {
   const [userForm, setUserForm] = useState({name: '', password: ''});
-  const {user, login} = useAuthContext();
+  const { user, login } = useAuthContext();
   const navigate = useNavigate();
 
   if (user) {
@@ -39,11 +39,11 @@ export const Login = () => {
         <label htmlFor="name">
           Usuario:
         </label>
-        <input id='name' type="text" name="name" value={userForm.name} onChange={handleChange}>
+        <input id='name' type="text" name="name" value={userForm.name} onChange={handleChange} />
       </div>
       <div>
         <label htmlFor="password">Clave:</label>
-        <input id='password' type="password" name="password" value={userForm.password} onChange={handleChange}>
+        <input id='password' type="password" name="password" value={userForm.password} onChange={handleChange} />
       </div>
 
       <button type="submit">Iniciar Sesión</button>
