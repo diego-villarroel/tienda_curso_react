@@ -28,21 +28,20 @@ export const Login = () => {
     } else {
       alert('Credenciales incorrectas');
       setUserForm({name: '', password: ''});
-    }
-    
+    }    
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className='login-form'>
       <h2>Iniciar Sessión</h2>
-      <div>
-        <label htmlFor="name">
+      <div className='form-input'>
+        <label htmlFor="name" className='form-label'>
           Usuario:
         </label>
         <input id='name' type="text" name="name" value={userForm.name} onChange={handleChange} />
       </div>
-      <div>
-        <label htmlFor="password">Clave:</label>
+      <div className='form-input'>
+        <label htmlFor="password" className='form-label'>Clave:</label>
         <input id='password' type="password" name="password" value={userForm.password} onChange={handleChange} />
       </div>
 
