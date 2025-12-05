@@ -3,16 +3,21 @@ import { Item } from "../Item/Item";
 import "./ItemList.css";
 
 export const ItemList = ({ lista }) => {
-    return (
-        <div className="item-list">
-            { lista.length ? (
-                lista.map( (prod) =>
-                    <Link className="item-card" to={`/detail/${prod.id}`} key={prod.id} >
-                        <Item {...prod} >
-                        </Item>
-                    </Link>
-                )
-            ) : ( <p>No hay productos</p>)}
-        </div>
-    )
+  console.log(lista)
+  return (
+    <div className="item-list">
+      { lista === null ? (
+        <p>Cargando...</p>
+      ) : lista.length ? (
+        lista.map( (prod) =>
+          <Link className="item-card" to={`/detail/${prod.id}`} key={prod.id} >
+            <Item {...prod} >
+            </Item>
+          </Link>
+        )
+      ) : ( 
+        <p>No hay productos</p>
+      )}
+    </div>
+  )
 }

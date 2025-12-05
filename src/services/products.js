@@ -33,7 +33,7 @@ export const getProducts = async (category) => {
 }
 
 
-export const getProductsById = async (id) => {
+export const getProductById = async (id) => {
   if (!id) {
     throw new Error("Tiene que enviar un ID para esta búsqueda");
   }
