@@ -11,9 +11,8 @@ export const ItemDetailContainer = () => {
   useEffect(() => {
     getProductById(id)
       .then( (data) => {
-        const foundItem = data.find((item) => parseInt(item.id) === parseInt(id));
-        if (foundItem) {
-          SetDetail(foundItem);
+        if (data) {
+          SetDetail(data);
         } else {                
           throw new Error('Producto no encontrado');
         }

@@ -9,12 +9,16 @@ export const validateProduct = (product, fileRequired = true ) => {
     errors.price = "El precio es obligatorio y debe ser mayor a 0";
   }
 
-  if ( !product.description.trim() ) {
-    errors.description = "El producto debe tener una descripción"
+  if ( !product.descripcion.trim() ) {
+    errors.descripcion = "El producto debe tener una descripción"
   }
 
-  if ( fileRequired && !product.file) {
-    errors.file = "El producto debe tener una imagen"
+  if ( !product.categoria.trim() ) {
+    errors.categoria = "El producto debe tener una categoría"
+  }
+
+  if ( fileRequired && !product.imagen) {
+    errors.imagen = "El producto debe tener una imagen"
   }
 
   return errors;

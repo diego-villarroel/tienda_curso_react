@@ -2,8 +2,8 @@ import { Outlet } from 'react-router-dom'
 
 export const AdminLayout = () => {
   return(
-    <div>
+    <main>
       <Outlet />
-    </div>
+    </main>
   )
 }

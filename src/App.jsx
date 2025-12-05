@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { CartProvider } from './context/CartContext/CartProvider';
 import { Carrito } from './components/Carrito/Carrito';
 import { Footer } from './components/Footer/Footer';
-import { ProductFormContainer } from './components/ProductFormContainer/ProductFormContainer';
+import { ProductFormContainer } from './components/AdminComponents/ProductFormContainer/ProductFormContainer';
 import { Login } from './components/Login/Login';
 import { RutasProtegidas } from './components/RutasProtegidas/RutasProtegidas';
 import { MainLayout } from './layouts/MainLayout';

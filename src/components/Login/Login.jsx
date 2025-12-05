@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate, Navigate } from 'react-router-dom';
 import { useAuthContext } from '../../context/AuthContext/useAuthContext';
+import './Login.css';
 
 export const Login = () => {
   const [userForm, setUserForm] = useState({name: '', password: ''});
@@ -32,21 +33,23 @@ export const Login = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className='login-form'>
-      <h2>Iniciar Sessión</h2>
-      <div className='form-input'>
-        <label htmlFor="name" className='form-label'>
-          Usuario:
-        </label>
-        <input id='name' type="text" name="name" value={userForm.name} onChange={handleChange} />
-      </div>
-      <div className='form-input'>
-        <label htmlFor="password" className='form-label'>Clave:</label>
-        <input id='password' type="password" name="password" value={userForm.password} onChange={handleChange} />
-      </div>
+    <section className="login-container">
+      <form onSubmit={handleSubmit} className='login-card'>
+        <h2>Iniciar Sessión</h2>
+        <div className='form-input'>
+          <label htmlFor="name" className='form-label'>
+            Usuario:
+          </label>
+          <input id='name' type="text" name="name" value={userForm.name} onChange={handleChange} />
+        </div>
+        <div className='form-input'>
+          <label htmlFor="password" className='form-label'>Clave:</label>
+          <input id='password' type="password" name="password" value={userForm.password} onChange={handleChange} />
+        </div>
 
-      <button type="submit">Iniciar Sesión</button>
+        <button type="submit">Iniciar Sesión</button>
       
-    </form>
+      </form>
+    </section>
   )
 }

@@ -1,8 +1,8 @@
-export const Item = ({ nombre, precio, descripcion, imgPath, children }) => {
+export const Item = ({ name, precio, descripcion, imageUrl, children }) => {
     return (
         <article>
-            <h4>{nombre}</h4>
-            <img src={imgPath} alt="" height={100}/>
+            <h4>{name}</h4>
+            <img src={imageUrl} alt="" height={100} />
             <p>$ {precio}</p>
             {children}
         </article>
